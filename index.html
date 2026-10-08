@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; connect-src 'self' https://script.google.com https://*.googleusercontent.com; base-uri 'none'; form-action 'none'">
+<title>Girlfriend Application Form</title>
+<style>
+  :root {
+    --navy: #1B2A49; --gold: #B8923A; --gold-soft: #FBF3DC; --gold-ink: #7A5A0E;
+    --text: #1E2430; --muted: #5B6577; --field: #F3F5F9; --border: #8A95AB; --line: #D5DAE4; --bad: #B23A3A; --bg: #EEF0F5;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.45 "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  .wrap { max-width: 860px; margin: 0 auto; background: #fff; min-height: 100vh; box-shadow: 0 0 40px rgba(27,42,73,.08); }
+  .banner { background: var(--navy); color: #fff; padding: 30px 28px 26px; border-bottom: 4px solid var(--gold); }
+  .banner .kicker { color: var(--gold); font-weight: 700; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+  .banner h1 { margin: 10px 0 4px; font-size: 32px; line-height: 1.1; letter-spacing: .01em; text-transform: uppercase; }
+  .banner .sub { font-size: 16px; opacity: .92; }
+  .pad { padding: 22px 28px 40px; }
+  .info { display: grid; grid-template-columns: 170px 1fr; gap: 6px 14px; margin: 4px 0 20px; font-size: 15px; }
+  .info dt { color: var(--navy); font-weight: 700; font-size: 12px; letter-spacing: .05em; text-transform: uppercase; padding-top: 2px; }
+  .info dd { margin: 0; }
+  .notice { background: var(--gold-soft); border-left: 4px solid var(--gold); color: #4a3a0c; padding: 14px 16px; font-size: 14px; margin: 0 0 18px; }
+  .consent { display: flex; gap: 10px; align-items: flex-start; margin: 0 0 20px; font-size: 15px; }
+  .btn { appearance: none; border: 0; background: var(--navy); color: #fff; font: 700 15px/1 inherit; letter-spacing: .04em; text-transform: uppercase; padding: 14px 22px; cursor: pointer; border-bottom: 3px solid var(--gold); }
+  .btn:hover { background: #24375f; }
+  .btn:disabled { opacity: .45; cursor: not-allowed; }
+  .btn.ghost { background: #fff; color: var(--navy); border: 1px solid var(--border); border-bottom-width: 3px; }
+  .topbar { position: sticky; top: 0; z-index: 5; background: #fff; border-bottom: 1px solid var(--line); }
+  .topbar .row { display: flex; justify-content: space-between; gap: 12px; padding: 10px 28px; font-size: 13px; color: var(--muted); }
+  .topbar .row b { color: var(--navy); }
+  .bar { height: 4px; background: var(--line); } .bar i { display: block; height: 100%; background: var(--gold); width: 0; transition: width .25s; }
+  .sec { display: flex; align-items: stretch; margin: 6px 0 18px; background: var(--navy); color: #fff; }
+  .sec .no { background: var(--gold); color: var(--navy); font-weight: 800; padding: 10px 12px; min-width: 46px; text-align: center; }
+  .sec h2 { margin: 0; padding: 10px 14px; font-size: 17px; letter-spacing: .04em; text-transform: uppercase; }
+  .grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px 16px; }
+  .q { grid-column: span 6; min-width: 0; }
+  .q.half { grid-column: span 3; } .q.third { grid-column: span 2; }
+  .q > label.l, .q > .l { display: block; font-weight: 700; font-size: 15px; margin: 0 0 7px; }
+  .req { color: var(--bad); margin-left: 2px; }
+  input[type=text], textarea { width: 100%; font: 16px/1.3 inherit; padding: 10px 12px; background: var(--field); border: 1px solid var(--border); border-radius: 0; color: var(--text); }
+  textarea { resize: vertical; min-height: 84px; }
+  input[type=text]:focus, textarea:focus { outline: 2px solid var(--gold); outline-offset: 0; background: #fff; }
+  .opts { display: flex; flex-wrap: wrap; gap: 8px 10px; }
+  .opt { display: inline-flex; align-items: flex-start; gap: 9px; padding: 9px 12px; border: 1px solid var(--line); background: #fff; cursor: pointer; font-size: 15px; line-height: 1.3; }
+  .opt:hover { border-color: var(--border); background: var(--field); }
+  .opt.on { border-color: var(--navy); background: #EAF0FB; }
+  .opt input { appearance: none; -webkit-appearance: none; flex: none; width: 18px; height: 18px; margin: 1px 0 0; border: 1.5px solid var(--border); background: #fff; display: grid; place-content: center; cursor: pointer; }
+  .opt input::before { content: ""; width: 10px; height: 10px; transform: scale(0); background: var(--navy); transition: transform .1s; clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0, 43% 62%); }
+  .opt input:checked::before { transform: scale(1); }
+  .opt input[type=radio] { border-radius: 50%; }
+  .opt input[type=radio]::before { clip-path: none; border-radius: 50%; width: 8px; height: 8px; }
+  .opt input:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+  .rate { display: flex; gap: 4px; }
+  .rate label { flex: 1; min-width: 0; text-align: center; border: 1px solid var(--line); padding: 9px 0; cursor: pointer; font-size: 14px; font-weight: 700; color: var(--muted); background: #fff; user-select: none; }
+  .rate label:hover { background: var(--field); }
+  .rate input { position: absolute; opacity: 0; pointer-events: none; }
+  .rate label.on { background: var(--navy); color: #fff; border-color: var(--navy); }
+  .rate label:focus-within { outline: 2px solid var(--gold); }
+  .rate-hint { display: flex; justify-content: space-between; font-size: 11px; color: var(--muted); margin-top: 3px; }
+  .note { grid-column: span 6; background: var(--gold-soft); border-left: 4px solid var(--gold); color: var(--gold-ink); padding: 10px 14px; font-style: italic; font-size: 14px; }
+  .q.invalid .opt, .q.invalid input[type=text], .q.invalid textarea, .q.invalid .rate label { border-color: var(--bad); }
+  .q.invalid::after { content: "Required"; display: block; color: var(--bad); font-size: 12px; margin-top: 4px; font-weight: 700; }
+  .nav { display: flex; justify-content: space-between; gap: 12px; margin-top: 30px; padding-top: 18px; border-top: 1px solid var(--line); }
+  .msg { margin: 16px 0 0; padding: 12px 14px; font-size: 14px; border-left: 4px solid var(--bad); background: #FDF1F1; color: #7b2222; }
+  .demo { background: #FFE9A8; color: #6b4b00; text-align: center; font-size: 12px; font-weight: 700; padding: 6px; letter-spacing: .04em; }
+  .center { text-align: center; padding: 60px 28px; }
+  .ref { display: inline-block; margin-top: 8px; padding: 8px 14px; border: 1px dashed var(--border); font-family: ui-monospace, Menlo, monospace; font-size: 16px; letter-spacing: .06em; }
+  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  .block h3 { margin: 22px 0 6px; color: var(--navy); text-transform: uppercase; letter-spacing: .05em; font-size: 14px; }
+  .block p { margin: 0 0 8px; font-size: 15px; }
+  @media (max-width: 640px) {
+    .banner { padding: 24px 18px 20px; } .banner h1 { font-size: 25px; }
+    .pad { padding: 18px 18px 36px; } .topbar .row { padding: 9px 18px; }
+    .info { grid-template-columns: 1fr; gap: 0; } .info dd { margin-bottom: 8px; }
+    .q.half, .q.third { grid-column: span 6; }
+    .opt { width: 100%; } .btn { padding: 14px 16px; }
+  }
+</style>
+<link rel="preconnect" href="https://script.google.com">
+</head>
+<body>
+<div class="wrap" id="app"><div class="center">Loading…</div></div>
+
+<script>
+/* Safety net: if the main script cannot start (e.g. a curly quote around API_URL), show a clear message. */
+window.addEventListener("error", function (e) {
+  var a = document.getElementById("app");
+  if (a && a.textContent.indexOf("Loading") === 0) {
+    a.innerHTML = '<div style="padding:40px 24px;font-family:Arial,sans-serif;max-width:640px;margin:0 auto">' +
+      '<h2>The form could not start</h2><p>Technical message: <code></code></p>' +
+      '<p><b>Most common cause:</b> the line <code>const API_URL = "..."</code> was edited in a program that turned the straight quotes " into curly quotes \u201C \u201D. ' +
+      'Re-open <b>index.html</b> in Notepad (Windows) or in TextEdit set to <i>Plain Text</i> (Mac: Format &gt; Make Plain Text), make sure the URL sits between two straight quotes, save, and upload again.</p></div>';
+    a.querySelector("code").textContent = (e && e.message) || "unknown error";
+  }
+});
+</script>
+<script>
+/* ===== SETUP: after you deploy the Google script, paste its web-app URL between the quotes ===== */
+const API_URL = "https://script.google.com/macros/s/AKfycbyt9R9xr8E81gwgN2d1KTeiifwGESbluOTX8Q45lcXY_Wvfpe8DoleSejDUmzi9lt_RKQ/exec";
+/* ================================================================================================ */
+
+const DEMO_CONFIG = {"open": true, "version": "demo1", "sections": [{"title": "Personal Information", "questions": [{"id": "q001", "type": "short", "label": "Full name", "options": [], "required": true, "width": "full", "rows": 1}, {"id": "q002", "type": "short", "label": "Age", "options": [], "required": true, "width": "third", "rows": 1}, {"id": "q003", "type": "short", "label": "Where are you from?", "options": [], "required": true, "width": "third", "rows": 1}, {"id": "q004", "type": "short", "label": "Occupation", "options": [], "required": true, "width": "third", "rows": 1}, {"id": "q005", "type": "short", "label": "Phone / messaging handle", "options": [], "required": false, "width": "half", "rows": 1}, {"id": "q006", "type": "short", "label": "Email", "options": [], "required": false, "width": "half", "rows": 1}, {"id": "q007", "type": "choice", "label": "Relationship status", "options": ["Single", "Complicated", "\"We're basically broken up\"", "Other"], "required": true, "width": "full", "rows": 1}, {"id": "q008", "type": "choice", "label": "Do you have children?", "options": ["No", "Yes"], "required": true, "width": "full", "rows": 1}, {"id": "q009", "type": "short", "label": "If yes, how many children?", "options": [], "required": false, "width": "full", "rows": 1}, {"id": "q010", "type": "choice", "label": "Do you currently have a boyfriend / husband / \"situationship\"?", "options": ["No", "Yes", "It's complicated"], "required": true, "width": "full", "rows": 1}, {"id": "q011", "type": "short", "label": "If yes or complicated, please explain:", "options": [], "required": false, "width": "full", "rows": 1}]}, {"title": "Relationship History", "questions": [{"id": "q012", "type": "short", "label": "How long was your last relationship?", "options": [], "required": false, "width": "full", "rows": 1}, {"id": "q013", "type": "short", "label": "Why did it end?", "options": [], "required": false, "width": "full", "rows": 1}, {"id": "q014", "type": "choice", "label": "Are you completely over your ex?", "options": ["Yes", "No", "I still check their page sometimes"], "required": true, "width": "full", "rows": 1}, {"id": "q015", "type": "choice", "label": "Do you still communicate with your ex?", "options": ["No", "Yes"], "required": true, "width": "full", "rows": 1}, {"id": "q016", "type": "short", "label": "If yes, explain:", "options": [], "required": false, "width": "full", "rows": 1}, {"id": "q017", "type": "long", "label": "What did your previous relationship teach you?", "options": [], "required": false, "width": "full", "rows": 3}]}, {"title": "Emotional Intelligence", "questions": [{"id": "q018", "type": "long", "label": "When you're angry with your partner, what do you normally do?", "options": [], "required": false, "width": "full", "rows": 3}, {"id": "q019", "type": "long", "label": "If your boyfriend tells you that something you did hurt him, what would you do?", "options": [], "required": false, "width": "full", "rows": 3}, {"id": "q020", "type": "choice", "label": "Can you communicate when you're upset instead of disappearing?", "options": ["Absolutely", "I need time, but I communicate", "I disappear for 3 business days"], "required": true, "width": "full", "rows": 1}, {"id": "q021", "type": "long", "label": "How do you handle disagreements?", "options": [], "required": false, "width": "full", "rows": 3}]}, {"title": "Communication Test", "questions": [{"id": "q022", "type": "choice", "label": "Your boyfriend sends you a message and you're busy. What do you do?", "options": ["Ignore him until I'm free", "Tell him I'm busy and respond when I can", "Send a quick \"I'm busy, I'll text you later\"", "Depends on my mood"], "required": true, "width": "full", "rows": 1}, {"id": "q023", "type": "choice", "label": "How often do you like communicating with your partner?", "options": ["All day", "Throughout the day", "Morning & evening", "Whenever I remember"], "required": true, "width": "full", "rows": 1}, {"id": "q024", "type": "choice", "label": "Are you comfortable with phone calls / video calls?", "options": ["Yes", "No", "Depends who's calling"], "required": true, "width": "full", "rows": 1}]}, {"title": "Red Flag Disclosure", "questions": [{"id": "q025", "type": "note", "label": "Please answer HONESTLY. Lying on this section will result in immediate termination of application.", "options": [], "required": false, "width": "full", "rows": 1}, {"id": "q026", "type": "choice", "label": "Do you cheat?", "options": ["No", "Sometimes", "I believe \"it's not cheating if...\""], "required": true, "width": "full", "rows": 1}, {"id": "q027", "type": "choice", "label": "Do you entertain other men while in a relationship?", "options": ["No", "Sometimes", "I just like attention"], "required": true, "width": "full", "rows": 1}, {"id": "q028", "type": "choice", "label": "Do you flirt with other men?", "options": ["No", "Yes", "Only when I'm bored"], "required": true, "width": "full", "rows": 1}, {"id": "q029", "type": "choice", "label": "Do you have anger issues?", "options": ["No", "Sometimes", "Yes - but I'm working on it"], "required": true, "width": "full", "rows": 1}, {"id": "q030", "type": "choice", "label": "Do you lie?", "options": ["Never", "Sometimes", "Everyone lies"], "required": true, "width": "full", "rows": 1}, {"id": "q031", "type": "long", "label": "What is your biggest red flag?", "options": [], "required": false, "width": "full", "rows": 2}]}, {"title": "Girlfriend Duties", "questions": [{"id": "q032", "type": "note", "label": "Rate yourself honestly from 1 to 10.", "options": [], "required": false, "width": "full", "rows": 1}, {"id": "q033", "type": "rating", "label": "Communication", "options": [], "required": true, "width": "third", "rows": 1}, {"id": "q034", "type": "rating", "label": "Loyalty", "options": [], "required": true, "width": "third", "rows": 1}, {"id": "q035", "type": "rating", "label": "Affection", "options": [], "required": true, "width": "third", "rows": 1}, {"id": "q036", "type": "rating", "label": "Romance", "options": [], "required": true, "width": "third", "rows": 1}, {"id": "q037", "type": "rating", "label": "Patience", "options": [], "required": true, "width": "third", "rows": 1}, {"id": "q038", "type": "rating", "label": "Emotional support", "options": [], "required": true, "width": "third", "rows": 1}, {"id": "q039", "type": "rating", "label": "Consistency", "options": [], "required": true, "width": "third", "rows": 1}, {"id": "q040", "type": "rating", "label": "Making your boyfriend laugh", "options": [], "required": true, "width": "third", "rows": 1}, {"id": "q041", "type": "rating", "label": "Planning dates", "options": [], "required": true, "width": "third", "rows": 1}, {"id": "q042", "type": "long", "label": "What does being a good girlfriend mean to you?", "options": [], "required": false, "width": "full", "rows": 3}, {"id": "q043", "type": "long", "label": "What would you do to make your boyfriend feel loved and appreciated?", "options": [], "required": false, "width": "full", "rows": 3}]}, {"title": "Financial & Responsibility Check", "questions": [{"id": "q044", "type": "choice", "label": "Do you have a job / income?", "options": ["Yes", "No", "Currently looking"], "required": true, "width": "full", "rows": 1}, {"id": "q045", "type": "choice", "label": "How do you feel about paying for dates?", "options": ["I don't mind", "We can take turns", "50/50 always", "My boyfriend can pay"], "required": true, "width": "full", "rows": 1}, {"id": "q046", "type": "choice", "label": "Are you financially responsible?", "options": ["Yes", "Trying my best", "My bank account needs prayer"], "required": true, "width": "full", "rows": 1}]}, {"title": "Lifestyle & Compatibility", "questions": [{"id": "q047", "type": "choice", "label": "Are you a morning person or a night owl?", "options": ["Morning person", "Night owl", "Depends on the day"], "required": true, "width": "full", "rows": 1}, {"id": "q048", "type": "choice", "label": "How would you describe your social energy?", "options": ["Homebody", "Balanced", "Always out", "Introvert with extrovert moments"], "required": true, "width": "full", "rows": 1}, {"id": "q049", "type": "long", "label": "What does a typical weekday look like for you?", "options": [], "required": false, "width": "full", "rows": 3}, {"id": "q050", "type": "long", "label": "How do you like to spend your free time and weekends?", "options": [], "required": false, "width": "full", "rows": 3}, {"id": "q051", "type": "short", "label": "Languages you speak", "options": [], "required": false, "width": "full", "rows": 1}]}, {"title": "Health, Habits & Daily Life", "questions": [{"id": "q052", "type": "choice", "label": "Do you smoke?", "options": ["No", "Occasionally", "Yes"], "required": true, "width": "full", "rows": 1}, {"id": "q053", "type": "choice", "label": "Do you drink alcohol?", "options": ["No", "Socially", "Often"], "required": true, "width": "full", "rows": 1}, {"id": "q054", "type": "choice", "label": "How often do you exercise?", "options": ["Never", "Sometimes", "Regularly", "Daily"], "required": true, "width": "full", "rows": 1}, {"id": "q055", "type": "choice", "label": "How tidy are you?", "options": ["Very neat", "Organized chaos", "Please don't enter my room"], "required": true, "width": "full", "rows": 1}, {"id": "q056", "type": "short", "label": "Diet restrictions or allergies", "options": [], "required": false, "width": "full", "rows": 1}]}, {"title": "Love & Affection", "questions": [{"id": "q057", "type": "choice", "label": "What is your love language?", "options": ["Words of affirmation", "Quality time", "Physical touch", "Acts of service", "Gifts", "All of the above"], "required": true, "width": "full", "rows": 1}, {"id": "q058", "type": "choice", "label": "How affectionate are you?", "options": ["Very affectionate", "Moderately affectionate", "I'm shy", "Please don't touch me"], "required": true, "width": "full", "rows": 1}, {"id": "q059", "type": "choice", "label": "Do you like giving your partner reassurance?", "options": ["Yes", "No", "Only when necessary"], "required": true, "width": "full", "rows": 1}, {"id": "q060", "type": "long", "label": "How would you reassure your boyfriend if he was feeling insecure?", "options": [], "required": false, "width": "full", "rows": 3}]}, {"title": "Social Media & Privacy", "questions": [{"id": "q061", "type": "choice", "label": "How active are you on social media?", "options": ["Barely", "Casual", "Very active", "Chronically online"], "required": true, "width": "full", "rows": 1}, {"id": "q062", "type": "choice", "label": "Would you post about our relationship?", "options": ["Yes", "Some things", "Prefer private", "Only on special occasions"], "required": true, "width": "full", "rows": 1}, {"id": "q063", "type": "choice", "label": "Do you like or comment on your ex's posts?", "options": ["Never", "Sometimes", "I plead the fifth"], "required": true, "width": "full", "rows": 1}, {"id": "q064", "type": "choice", "label": "Do you share our conversations with your friends?", "options": ["Never", "Only big news", "The group chat has seen everything"], "required": true, "width": "full", "rows": 1}, {"id": "q065", "type": "choice", "label": "Are you comfortable sharing your location with a partner?", "options": ["Yes", "No", "Only when traveling"], "required": true, "width": "full", "rows": 1}]}, {"title": "Jealousy & Boundaries", "questions": [{"id": "q066", "type": "rating", "label": "How jealous are you?", "options": [], "required": true, "width": "third", "rows": 1}, {"id": "q067", "type": "choice", "label": "Would you go through your boyfriend's phone?", "options": ["No", "If I have a reason", "Yes, I need to know everything"], "required": true, "width": "full", "rows": 1}, {"id": "q068", "type": "choice", "label": "Do you believe your boyfriend should have female friends?", "options": ["Yes", "No", "Depends on the friendship"], "required": true, "width": "full", "rows": 1}, {"id": "q069", "type": "long", "label": "What boundaries do you expect in a relationship?", "options": [], "required": false, "width": "full", "rows": 3}]}, {"title": "Trust & Honesty Scenarios", "questions": [{"id": "q070", "type": "choice", "label": "I tell you a secret. What do you do with it?", "options": ["Keep it", "Tell my best friend", "Tell the group chat"], "required": true, "width": "full", "rows": 1}, {"id": "q071", "type": "choice", "label": "You make a mistake and I haven't noticed. Do you tell me?", "options": ["Immediately", "Eventually", "Only if asked"], "required": true, "width": "full", "rows": 1}, {"id": "q072", "type": "short", "label": "You forget our anniversary. What do you do?", "options": [], "required": false, "width": "full", "rows": 1}, {"id": "q073", "type": "long", "label": "An ex messages you \"hey stranger\". What do you do?", "options": [], "required": false, "width": "full", "rows": 3}]}, {"title": "Conflict & Repair", "questions": [{"id": "q074", "type": "choice", "label": "How long can you stay upset?", "options": ["Minutes", "Hours", "Days", "Until I get an apology"], "required": true, "width": "full", "rows": 1}, {"id": "q075", "type": "choice", "label": "Do you bring up past mistakes during new arguments?", "options": ["Never", "Sometimes", "I keep receipts"], "required": true, "width": "full", "rows": 1}, {"id": "q076", "type": "choice", "label": "Do you give the silent treatment?", "options": ["Never", "Occasionally", "I'm an expert"], "required": true, "width": "full", "rows": 1}, {"id": "q077", "type": "long", "label": "What does a healthy apology look like to you?", "options": [], "required": false, "width": "full", "rows": 3}]}, {"title": "Family & Friends", "questions": [{"id": "q078", "type": "choice", "label": "How close are you with your family?", "options": ["Very close", "Close", "It's complicated", "Distant"], "required": true, "width": "full", "rows": 1}, {"id": "q079", "type": "choice", "label": "Would you be willing to meet my friends and family at the right time?", "options": ["Yes", "When I'm ready", "No"], "required": true, "width": "full", "rows": 1}, {"id": "q080", "type": "choice", "label": "Do your friends know you are applying?", "options": ["Yes", "No", "They helped me fill this out"], "required": true, "width": "full", "rows": 1}, {"id": "q081", "type": "short", "label": "What would your best friend say is your biggest flaw?", "options": [], "required": false, "width": "full", "rows": 1}, {"id": "q082", "type": "long", "label": "How would you get along with my friends and family?", "options": [], "required": false, "width": "full", "rows": 3}]}, {"title": "Deal-Breakers & Non-Negotiables", "questions": [{"id": "q083", "type": "multi", "label": "Tick everything that is a deal-breaker for you:", "options": ["Dishonesty", "Disrespect", "Infidelity", "Lack of ambition", "Poor hygiene", "Addictions", "Rudeness to others", "Controlling behavior", "Lack of communication", "Broken promises"], "required": true, "width": "full", "rows": 1}, {"id": "q084", "type": "short", "label": "What is one thing you will never compromise on?", "options": [], "required": false, "width": "full", "rows": 1}, {"id": "q085", "type": "short", "label": "What do you think my deal-breakers are?", "options": [], "required": false, "width": "full", "rows": 1}]}, {"title": "Values & Life Goals", "questions": [{"id": "q086", "type": "short", "label": "Your top 3 values", "options": [], "required": false, "width": "full", "rows": 1}, {"id": "q087", "type": "long", "label": "What are your goals for the next 5 years (career, education, personal)?", "options": [], "required": false, "width": "full", "rows": 3}, {"id": "q088", "type": "choice", "label": "Do you want children someday?", "options": ["Yes", "No", "Open to it", "Not sure yet"], "required": true, "width": "full", "rows": 1}, {"id": "q089", "type": "choice", "label": "How important is family to you?", "options": ["Extremely", "Very", "Somewhat", "Not very"], "required": true, "width": "full", "rows": 1}, {"id": "q090", "type": "choice", "label": "Are you emotionally available right now?", "options": ["Yes", "Almost", "Not yet"], "required": true, "width": "full", "rows": 1}, {"id": "q091", "type": "long", "label": "What are 2-3 things you are actively working on improving about yourself?", "options": [], "required": false, "width": "full", "rows": 3}]}, {"title": "Future & Practical Compatibility", "questions": [{"id": "q092", "type": "short", "label": "Where do you live now?", "options": [], "required": false, "width": "half", "rows": 1}, {"id": "q093", "type": "short", "label": "Where do you want to live long-term?", "options": [], "required": false, "width": "half", "rows": 1}, {"id": "q094", "type": "choice", "label": "Are you open to a long-distance period if needed?", "options": ["Yes", "No", "Temporarily"], "required": true, "width": "full", "rows": 1}, {"id": "q095", "type": "choice", "label": "How do you feel about travel?", "options": ["Love it", "Occasionally", "Prefer staying home"], "required": true, "width": "full", "rows": 1}, {"id": "q096", "type": "choice", "label": "Where do you see the relationship in a year?", "options": ["Dating", "Exclusive", "Living together", "Engaged", "Not sure"], "required": true, "width": "full", "rows": 1}]}, {"title": "Intentions", "questions": [{"id": "q097", "type": "long", "label": "Why are you applying for this position?", "options": [], "required": false, "width": "full", "rows": 3}, {"id": "q098", "type": "choice", "label": "What are you looking for?", "options": ["Serious relationship", "Something casual", "Friendship", "Marriage eventually", "I don't know yet", "I just think he's cute"], "required": true, "width": "full", "rows": 1}, {"id": "q099", "type": "long", "label": "Where do you see yourself in 2-3 years?", "options": [], "required": false, "width": "full", "rows": 3}, {"id": "q100", "type": "long", "label": "What does commitment mean to you?", "options": [], "required": false, "width": "full", "rows": 3}, {"id": "q101", "type": "choice", "label": "Are you willing to be loyal, honest, consistent and intentional?", "options": ["Yes", "No", "I need to think about it"], "required": true, "width": "full", "rows": 1}]}, {"title": "Rapid-Fire Round", "questions": [{"id": "q102", "type": "note", "label": "Short answers only. First instinct wins.", "options": [], "required": false, "width": "full", "rows": 1}, {"id": "q103", "type": "short", "label": "Coffee or tea?", "options": [], "required": false, "width": "half", "rows": 1}, {"id": "q104", "type": "short", "label": "Cat or dog?", "options": [], "required": false, "width": "half", "rows": 1}, {"id": "q105", "type": "short", "label": "Favorite food", "options": [], "required": false, "width": "half", "rows": 1}, {"id": "q106", "type": "short", "label": "Favorite movie / series", "options": [], "required": false, "width": "half", "rows": 1}, {"id": "q107", "type": "short", "label": "Dream vacation", "options": [], "required": false, "width": "half", "rows": 1}, {"id": "q108", "type": "short", "label": "Best quality you have", "options": [], "required": false, "width": "half", "rows": 1}, {"id": "q109", "type": "short", "label": "Worst habit", "options": [], "required": false, "width": "half", "rows": 1}, {"id": "q110", "type": "short", "label": "Ideal Sunday", "options": [], "required": false, "width": "half", "rows": 1}]}, {"title": "Final Interview", "questions": [{"id": "q111", "type": "long", "label": "1. Why should I choose you over the other applicants?", "options": [], "required": false, "width": "full", "rows": 3}, {"id": "q112", "type": "long", "label": "2. What is one thing you can promise me as my girlfriend?", "options": [], "required": false, "width": "full", "rows": 3}, {"id": "q113", "type": "long", "label": "3. What is something you would NEVER do to your boyfriend?", "options": [], "required": false, "width": "full", "rows": 3}, {"id": "q114", "type": "long", "label": "4. What is your idea of a perfect date?", "options": [], "required": false, "width": "full", "rows": 3}, {"id": "q115", "type": "long", "label": "5. If we had an argument, what would you do before going to sleep?", "options": [], "required": false, "width": "full", "rows": 3}, {"id": "q116", "type": "long", "label": "6. If I'm having a terrible day, how would you make it better?", "options": [], "required": false, "width": "full", "rows": 3}, {"id": "q117", "type": "long", "label": "7. What are your intentions with me specifically?", "options": [], "required": false, "width": "full", "rows": 3}, {"id": "q118", "type": "long", "label": "8. Tell me one thing about yourself that I should know before considering your application.", "options": [], "required": false, "width": "full", "rows": 3}]}, {"title": "Accountability Test", "questions": [{"id": "q119", "type": "choice", "label": "Can you apologise without immediately following it with \"but you...\"?", "options": ["Yes", "No", "I already feel attacked"], "required": true, "width": "full", "rows": 1}]}, {"title": "Initiative Test", "questions": [{"id": "q120", "type": "choice", "label": "\"Plan a date\" means:", "options": ["Book something I know he'll love", "Ask him 14 questions until he plans it himself", "Say \"I'm easy, whatever you want\""], "required": true, "width": "full", "rows": 1}, {"id": "q121", "type": "short", "label": "Briefly describe the last date you planned (for anyone):", "options": [], "required": false, "width": "full", "rows": 1}]}, {"title": "The Final Question", "questions": [{"id": "q122", "type": "long", "label": "If you become my girlfriend, what can I expect from you that will make me feel safe, loved, respected and appreciated?", "options": [], "required": false, "width": "full", "rows": 5}]}], "settings": {"title": "Girlfriend Application Form", "subtitle": "Recruitment cycle 2026", "position": "My Girlfriend", "department": "My Heart & Happiness", "contract": "Long-term, renewable indefinitely", "fee": "¥0 - but wasting my time will result in immediate rejection.", "consentText": "I understand where my answers go, and I agree to submit them.", "importantNotice": "Submitting this application does NOT guarantee employment. Successful candidates will undergo further screening, including consistency checks, communication assessments, loyalty testing and an extremely serious \"Do you actually know how to treat a man?\" evaluation.", "probation": "Good morning texts alone do not constitute satisfactory performance. By submitting, you confirm that all information provided is truthful.", "thanksTitle": "Application received", "thanksText": "Thank you. Your application is now under review. Candidates who are shortlisted will be contacted for the next stage.", "notice": "This is a light-hearted but sincere form. Your answers are sent only to YOUR NAME, are stored in a private Google Sheet in YOUR NAME's own Google account, and are not shared with anyone else or used for anything other than this application. Answer only what you are comfortable sharing; you can skip optional fields. To see, correct or delete your answers at any time, contact YOUR EMAIL (for deletion requests).", "legalNote": "A light-hearted private project: this is a personal, non-commercial joke project run by YOUR NAME, a private individual. It is not a real job, a company or a recruitment service. Nothing is sold and no fee is charged.\nAdults only: you must be 18 or older to fill in this form. If you are under 18, do not continue.\nVoluntary: you are free not to fill it in, and you can close this page at any time. Nothing is stored unless you press Submit. You can skip any optional question.\nWhat is collected: only what you type into the form, and the date and time you submit it. No tracking, advertising tools or analytics are used. Please do not write about other people, and do not enter ID numbers, bank details or passwords.\nWho sees it: only YOUR NAME. Your answers are not sold, published, shown to other applicants, or used for anything except this application.\nWhere it is stored: in a private Google Sheet in YOUR NAME's own Google account. Google's servers may be located outside Japan (for example in the United States). By submitting, you agree to your answers being stored there.\nHow long: Your answers are kept only for this application. They are deleted permanently no later than 60 days after you submit them, and sooner if you ask. If you are not selected, or you withdraw, they are deleted on request.\nYour rights: you can ask at any time to see, correct or delete your answers, before or after submitting, by writing to YOUR EMAIL (for deletion requests) with your reference number. Requests are handled promptly.\nIf this bothers you: it is meant as a joke between adults. If you are not comfortable with it, simply close the page, or write to YOUR EMAIL (for deletion requests) and you will not be contacted about it again.\nCare with your data: your information is handled carefully and in the spirit of Japan's Act on the Protection of Personal Information (APPI). This notice is a plain-language description, not legal advice.", "controller": "YOUR NAME", "contactEmail": "YOUR EMAIL (for deletion requests)", "ageQuestionId": "q002"}};   // built-in copy of the form (no points inside)
+const DEMO = API_URL.indexOf("PASTE") === 0;
+const app = document.getElementById("app");
+let cfg = null, answers = {}, step = -1, consent = false, startedAt = Date.now();
+
+function h(tag, attrs, ...kids) {
+  const el = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs || {})) {
+    if (v === false || v === null || v === undefined) continue;
+    if (k === "class") el.className = v; else if (k === "text") el.textContent = v;
+    else if (k.startsWith("on")) el.addEventListener(k.slice(2), v); else el.setAttribute(k, v === true ? "" : v);
+  }
+  kids.flat().forEach(c => { if (c !== null && c !== undefined && c !== false) el.append(c.nodeType ? c : document.createTextNode(c)); });
+  return el;
+}
+const draftKey = () => "gf_draft_" + (cfg ? cfg.version : "x");
+function saveDraft() { try { localStorage.setItem(draftKey(), JSON.stringify({ answers, step, consent })); } catch (e) {} }
+function loadDraft() { try { const d = JSON.parse(localStorage.getItem(draftKey()) || "null"); if (d) { answers = d.answers || {}; step = Math.min(d.step, cfg.sections.length); consent = !!d.consent; return true; } } catch (e) {} return false; }
+function clearDraft() { try { localStorage.removeItem(draftKey()); } catch (e) {} }
+
+const CACHE_KEY = "gf_cfg_cache_v1";
+function readCache() { try { const c = JSON.parse(localStorage.getItem(CACHE_KEY) || "null"); if (c && c.config && c.url === API_URL.trim()) return c.config; } catch (e) {} return null; }
+function writeCache(c) { try { localStorage.setItem(CACHE_KEY, JSON.stringify({ url: API_URL.trim(), config: c })); } catch (e) {} }
+
+function showLoading() {
+  app.replaceChildren(h("div", { class: "center" },
+    h("div", { style: "width:34px;height:34px;border:4px solid #D9DEE8;border-top-color:#B8923A;border-radius:50%;margin:0 auto 16px;animation:gfspin 1s linear infinite" }),
+    h("p", { id: "loadmsg", text: "Loading the application form…" })));
+  if (!document.getElementById("gfspin")) { const st = document.createElement("style"); st.id = "gfspin"; st.textContent = "@keyframes gfspin{to{transform:rotate(360deg)}}"; document.head.append(st); }
+  setTimeout(() => { const m = document.getElementById("loadmsg"); if (m) m.textContent = "Still waking up the server… the first load can take up to a minute. Please keep this page open."; }, 6000);
+}
+
+async function fetchConfig() {
+  if (!/^https:\/\/script\.google\.com\/(a\/macros\/[^\/]+\/|macros\/)s\/[^\/]+\/exec$/.test(API_URL.trim())) throw new Error("BADURL");
+  let lastErr;
+  for (let i = 0; i < 2; i++) {            // GET is harmless to repeat: one automatic retry
+    try {
+      const r = await fetchTimeout(API_URL.trim(), {}, 75000);
+      const txt = await r.text();
+      let j; try { j = JSON.parse(txt); } catch (x) { throw new Error("NOTJSON"); }
+      if (!j.ok) throw new Error(j.error || "unavailable");
+      return j.config;
+    } catch (e) { lastErr = e; if (e.message === "BADURL" || e.message === "NOTJSON") break; }
+  }
+  throw lastErr;
+}
+
+function lsGet(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+function lsSet(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+function renderBlocked() {
+  clearDraft(); answers = {}; step = -1;
+  app.replaceChildren(banner(cfg.settings), h("div", { class: "center" },
+    h("h2", { text: "Sorry - adults only" }),
+    h("p", { text: "This form is only for people aged 18 or over. Nothing you entered was saved or sent anywhere." }),
+    h("p", { class: "muted", style: "color:#5B6577;font-size:13px", text: "Please close this page." })));
+  window.scrollTo(0, 0);
+}
+function renderGate() {
+  const s = cfg.settings;
+  app.replaceChildren(banner(s), h("div", { class: "center" },
+    h("h2", { text: "Age check" }),
+    h("p", { text: "This form contains personal questions and is strictly for adults. Please confirm your age to continue." }),
+    h("div", { class: "nav", style: "justify-content:center;gap:12px;flex-wrap:wrap" },
+      h("button", { class: "btn", onclick: () => { lsSet("gf_adult_ok", "1"); start(); } }, "I am 18 or older"),
+      h("button", { class: "btn ghost", onclick: () => { lsSet("gf_minor", "1"); renderBlocked(); } }, "I am under 18"))));
+}
+function footer() {
+  const s = cfg.settings;
+  return h("div", { class: "foot", style: "text-align:center;color:#5B6577;font-size:11px;padding:18px 12px 28px;line-height:1.5" },
+    "Adults only (18+) - private, non-commercial project by " + (s.controller || "") + ". To access or delete your answers: " + (s.contactEmail || ""));
+}
+function start() {
+  document.title = cfg.settings.title;
+  if (!cfg.open) return renderClosed();
+  if (lsGet("gf_minor") === "1") return renderBlocked();
+  if (!DEMO && lsGet("gf_adult_ok") !== "1") return renderGate();
+  if (loadDraft() && step >= 0) { renderStep(); toast("Your previous answers were restored."); } else renderIntro();
+}
+
+function showError(e) {
+  const hints = {
+    BADURL: "Setup problem: API_URL is not a Google web-app link. It must start with https://script.google.com/macros/s/ and end with /exec.",
+    NOTJSON: "Setup problem: Google returned a web page instead of data. In Apps Script, Deploy > Manage deployments: 'Who has access' must be 'Anyone', and use the link that ends in /exec.",
+    TIMEOUT: "The server did not answer in time. Try again - the second attempt is usually much faster.",
+  };
+  const hint = hints[e.message] || (e.message === "Failed to fetch" ? "The browser could not reach the Google script (wrong link, no connection, or access not set to 'Anyone')." : "");
+  app.replaceChildren(banner({ title: "Girlfriend Application Form", subtitle: "" }), h("div", { class: "center" },
+    h("h2", { text: "The form is not available right now" }), h("p", { text: "Please check your connection and try again in a moment." }),
+    hint ? h("p", { class: "muted", style: "color:#5B6577;font-size:13px;max-width:560px;margin:12px auto", text: hint }) : null,
+    h("button", { class: "btn", onclick: () => { showLoading(); boot(); } }, "Try again")));
+}
+
+async function boot() {
+  if (DEMO) { cfg = DEMO_CONFIG; return start(); }
+  // 1) Wake the Google script in the background so it is warm by the time she submits. Never blocks the page.
+  try { fetch(API_URL.trim(), { mode: "no-cors" }).catch(() => {}); } catch (e) {}
+  // 2) The form itself comes from this website (instant): config.json if present, otherwise the built-in copy.
+  try {
+    const r = await fetchTimeout("config.json", { cache: "no-cache" }, 4000);
+    if (r.ok) { const j = JSON.parse(await r.text()); cfg = j.config || j; }
+  } catch (e) {}
+  if (!cfg || !cfg.sections) cfg = DEMO_CONFIG;
+  start();
+}
+
+function fetchTimeout(url, opts, ms) {
+  const ctl = new AbortController(); const t = setTimeout(() => ctl.abort(), ms);
+  return fetch(url, Object.assign({}, opts, { signal: ctl.signal })).catch(e => { throw e.name === "AbortError" ? new Error("TIMEOUT") : e; }).finally(() => clearTimeout(t));
+}
+
+function banner(s) {
+  return h("div", {}, DEMO ? h("div", { class: "demo" }, "DEMO MODE - nothing is sent anywhere. Set API_URL to go live.") : null,
+    h("div", { class: "banner" }, h("div", { class: "kicker" }, "Confidential - application for employment (of the heart)"),
+      h("h1", { text: s.title }), h("div", { class: "sub", text: s.subtitle })));
+}
+
+function renderClosed() {
+  app.replaceChildren(banner(cfg.settings), h("div", { class: "center" }, h("h2", { text: "Applications are closed" }), h("p", { text: "Thank you for your interest." })));
+}
+
+function renderIntro() {
+  const s = cfg.settings;
+  const cb = h("input", { type: "checkbox", id: "consent", checked: consent, onchange: e => { consent = e.target.checked; go.disabled = !consent; saveDraft(); } });
+  const go = h("button", { class: "btn", disabled: !consent, onclick: () => { step = 0; saveDraft(); renderStep(); } }, "Start application");
+  app.replaceChildren(banner(s), h("div", { class: "pad" },
+    h("dl", { class: "info" },
+      h("dt", {}, "Position applied for"), h("dd", { text: s.position }), h("dt", {}, "Department"), h("dd", { text: s.department }),
+      h("dt", {}, "Contract"), h("dd", { text: s.contract }), h("dt", {}, "Application fee"), h("dd", { text: s.fee })),
+    h("div", { class: "notice" }, h("b", {}, "Before you start. "), s.notice),
+    h("div", { class: "notice", style: "background:#fff" }, h("b", {}, "Privacy and legal information"),
+      h("ul", { style: "margin:8px 0 0 18px;padding:0" }, (s.legalNote || "").split("\n").filter(x => x.trim()).map(line => {
+        const i = line.indexOf(":"); return h("li", { style: "margin:5px 0" }, i > 0 && i < 40 ? [h("b", { text: line.slice(0, i + 1) }), " " + line.slice(i + 1).trim()] : line); }))),
+    h("label", { class: "consent" }, cb, h("span", { text: s.consentText })),
+    go), footer());
+  window.scrollTo(0, 0);
+}
+
+function opt(q, type, value, name) {
+  const cur = answers[q.id];
+  const on = type === "radio" ? cur === value : Array.isArray(cur) && cur.includes(value);
+  const input = h("input", { type, name, value, checked: on });
+  const lab = h("label", { class: "opt" + (on ? " on" : "") }, input, h("span", { text: value }));
+  input.addEventListener("change", () => {
+    if (type === "radio") { answers[q.id] = value; lab.parentNode.querySelectorAll(".opt").forEach(x => x.classList.toggle("on", x === lab)); }
+    else {
+      const set = new Set(answers[q.id] || []); input.checked ? set.add(value) : set.delete(value);
+      answers[q.id] = q.options.filter(o => set.has(o)); lab.classList.toggle("on", input.checked);
+    }
+    lab.closest(".q").classList.remove("invalid"); saveDraft();
+  });
+  return lab;
+}
+
+function field(q) {
+  const wrap = h("div", { class: "q " + (q.type === "rating" ? "half" : q.type === "long" || q.type === "choice" || q.type === "multi" ? "" : q.width || ""), "data-id": q.id });
+  const lab = h("div", { class: "l" }, q.label, q.required ? h("span", { class: "req", "aria-hidden": "true" }, " *") : null);
+  if (q.type === "short") {
+    const id = "f_" + q.id; wrap.append(h("label", { class: "l", for: id }, q.label, q.required ? h("span", { class: "req" }, " *") : null));
+    wrap.append(h("input", { type: "text", id, maxlength: 300, value: answers[q.id] || "", autocomplete: "off",
+      oninput: e => { answers[q.id] = e.target.value; wrap.classList.remove("invalid"); saveDraft(); } }));
+  } else if (q.type === "long") {
+    const id = "f_" + q.id; wrap.append(h("label", { class: "l", for: id }, q.label, q.required ? h("span", { class: "req" }, " *") : null));
+    const t = h("textarea", { id, rows: q.rows || 3, maxlength: 3000, oninput: e => { answers[q.id] = e.target.value; wrap.classList.remove("invalid"); saveDraft(); } });
+    t.value = answers[q.id] || ""; wrap.append(t);
+  } else if (q.type === "choice" || q.type === "multi") {
+    const type = q.type === "choice" ? "radio" : "checkbox";
+    wrap.setAttribute("role", type === "radio" ? "radiogroup" : "group"); wrap.setAttribute("aria-label", q.label);
+    wrap.append(lab, h("div", { class: "opts" }, q.options.map(o => opt(q, type, o, "n_" + q.id))));
+  } else if (q.type === "rating") {
+    wrap.append(lab);
+    const r = h("div", { class: "rate", role: "radiogroup", "aria-label": q.label });
+    for (let i = 1; i <= 10; i++) {
+      const input = h("input", { type: "radio", name: "n_" + q.id, value: i, checked: answers[q.id] === i });
+      const l = h("label", { class: answers[q.id] === i ? "on" : "" }, input, String(i));
+      input.addEventListener("change", () => { answers[q.id] = i; r.querySelectorAll("label").forEach(x => x.classList.toggle("on", x === l)); wrap.classList.remove("invalid"); saveDraft(); });
+      r.append(l);
+    }
+    wrap.append(r, h("div", { class: "rate-hint" }, h("span", { text: "1 = low" }), h("span", { text: "10 = high" })));
+  } else if (q.type === "note") {
+    return h("div", { class: "note", text: q.label });
+  }
+  return wrap;
+}
+
+function topbar() {
+  const total = cfg.sections.length + 1;
+  const done = Math.max(0, step);
+  const name = step < cfg.sections.length ? cfg.sections[step].title : "Final step";
+  return h("div", { class: "topbar" }, h("div", { class: "row" }, h("span", {}, "Section ", h("b", { text: String(Math.min(step + 1, total)) }), " of " + total),
+    h("span", { text: name })), h("div", { class: "bar" }, h("i", { style: "width:" + Math.round(done / total * 100) + "%" })));
+}
+
+function renderStep() {
+  if (step >= cfg.sections.length) return renderFinal();
+  const sec = cfg.sections[step];
+  const grid = h("div", { class: "grid" }, sec.questions.map(field));
+  const err = h("div", { class: "msg", role: "alert", hidden: true });
+  const next = h("button", { class: "btn", onclick: () => {
+    const miss = missing(sec);
+    if (miss.length) { err.hidden = false; err.textContent = "Please complete the highlighted fields (" + miss.length + ")."; mark(sec, miss); return; }
+    const aq = sec.questions.find(q => q.id === cfg.settings.ageQuestionId);
+    if (aq) {
+      const n = parseInt(String(answers[aq.id]).replace(/[^0-9]/g, " ").trim().split(/\s+/)[0], 10);
+      if (isNaN(n)) { err.hidden = false; err.textContent = "Please enter your age as a number."; mark(sec, [aq.id]); return; }
+      if (n < 18) { lsSet("gf_minor", "1"); return renderBlocked(); }
+    }
+    step++; saveDraft(); renderStep();
+  } }, "Next");
+  const back = h("button", { class: "btn ghost", onclick: () => { if (step === 0) { step = -1; renderIntro(); } else { step--; saveDraft(); renderStep(); } } }, "Back");
+  app.replaceChildren(topbar(), h("div", { class: "pad" },
+    h("div", { class: "sec" }, h("div", { class: "no", text: String(step + 1).padStart(2, "0") }), h("h2", { text: sec.title, tabindex: "-1", id: "sectitle" })),
+    grid, err, h("div", { class: "nav" }, back, next)));
+  window.scrollTo(0, 0);
+}
+
+function isEmpty(q) {
+  const a = answers[q.id];
+  if (q.type === "multi") return !(Array.isArray(a) && a.length);
+  if (q.type === "short" || q.type === "long") return !(a && String(a).trim());
+  return a === undefined || a === null || a === "";
+}
+function missing(sec) { return sec.questions.filter(q => q.required && q.type !== "note" && isEmpty(q)).map(q => q.id); }
+function mark(sec, ids) {
+  document.querySelectorAll(".q").forEach(el => el.classList.toggle("invalid", ids.includes(el.dataset.id)));
+  const first = document.querySelector(".q.invalid"); if (first) first.scrollIntoView({ behavior: "smooth", block: "center" });
+}
+
+function renderFinal() {
+  const s = cfg.settings;
+  const err = h("div", { class: "msg", role: "alert", hidden: true });
+  const hp = h("input", { type: "text", name: "website", tabindex: "-1", autocomplete: "off", "aria-hidden": "true" });
+  const send = h("button", { class: "btn", onclick: () => submit(send, err, hp) }, "Submit application");
+  const back = h("button", { class: "btn ghost", onclick: () => { step = cfg.sections.length - 1; saveDraft(); renderStep(); } }, "Back");
+  app.replaceChildren(topbar(), h("div", { class: "pad" },
+    h("div", { class: "sec" }, h("div", { class: "no", text: "!" }), h("h2", { text: "Final step", tabindex: "-1" })),
+    h("div", { class: "block" }, h("h3", { text: "Important notice" }), h("p", { text: s.importantNotice }),
+      h("h3", { text: "Probation period" }), h("p", { text: s.probation })),
+    h("div", { class: "hp" }, hp), err, h("div", { class: "nav" }, back, send)), footer());
+  window.scrollTo(0, 0);
+}
+
+async function submit(btn, err, hp) {
+  err.hidden = true; btn.disabled = true; btn.textContent = "Sending… (can take up to a minute)";
+  // re-check all sections
+  for (let i = 0; i < cfg.sections.length; i++) {
+    const miss = missing(cfg.sections[i]);
+    if (miss.length) { step = i; saveDraft(); renderStep(); const e2 = document.querySelector(".msg"); e2.hidden = false; e2.textContent = "Please complete the highlighted fields (" + miss.length + ")."; mark(cfg.sections[i], miss); return; }
+  }
+  try {
+    let res;
+    if (DEMO) { await new Promise(r => setTimeout(r, 700)); res = { ok: true, ref: "GF-DEMO-" + Math.random().toString(36).slice(2, 7).toUpperCase() }; }
+    else {
+      const r = await fetchTimeout(API_URL.trim(), { method: "POST", headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify({ answers, adult: true, hp: hp.value, secs: Math.round((Date.now() - startedAt) / 1000) }) }, 90000);
+      res = JSON.parse(await r.text());
+    }
+    if (!res.ok) throw new Error(res.error || "Could not send");
+    clearDraft(); renderThanks(res.ref);
+  } catch (e) {
+    err.hidden = false; err.textContent = (e && e.message && e.message !== "Failed to fetch" ? e.message : "Could not reach the server.") + " Your answers are still saved on this device. Please try again.";
+    btn.disabled = false; btn.textContent = "Submit application";
+  }
+}
+
+function renderThanks(ref) {
+  const s = cfg.settings;
+  app.replaceChildren(banner(s), h("div", { class: "center" }, h("h2", { text: s.thanksTitle }), h("p", { text: s.thanksText }),
+    h("div", {}, "Reference: ", h("span", { class: "ref", text: ref })),
+    h("p", { class: "muted", style: "color:#5B6577;font-size:12px;margin-top:14px", text: "To see, correct or delete your answers, write to " + (s.contactEmail || "the organiser") + " and quote this reference." })));
+  window.scrollTo(0, 0);
+}
+
+function toast(t) {
+  const el = h("div", { class: "notice", style: "position:fixed;bottom:16px;left:50%;transform:translateX(-50%);max-width:420px;z-index:9;margin:0" }, t);
+  document.body.append(el); setTimeout(() => el.remove(), 3500);
+}
+boot();
+</script>
+</body>
+</html>
